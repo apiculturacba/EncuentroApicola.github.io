@@ -4,6 +4,7 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
+  base: "/EncuentroApicola.github.io/", // 👈 IMPORTANTE para GitHub Pages
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -11,7 +12,7 @@ export default defineConfig({
     process.env.REPL_ID !== undefined
       ? [
           await import("@replit/vite-plugin-cartographer").then((m) =>
-            m.cartographer(),
+            m.cartographer()
           ),
         ]
       : []),
@@ -32,6 +33,10 @@ export default defineConfig({
     fs: {
       strict: true,
       deny: ["**/.*"],
+    },
+  },
+});
+
     },
   },
 });

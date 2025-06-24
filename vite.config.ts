@@ -10,7 +10,7 @@ export default async () => {
       : [];
 
   return defineConfig({
-    base: "/EncuentroApicola.github.io/", // 👈 base importante para GitHub Pages
+    base: "/EncuentroApicola.github.io/",
     plugins: [react(), runtimeErrorOverlay(), ...cartographerPlugin],
     resolve: {
       alias: {
@@ -32,4 +32,3 @@ export default async () => {
     },
   });
 };
-

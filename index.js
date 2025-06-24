@@ -485,7 +485,6 @@ var vite_config_default = async () => {
   const cartographerPlugin = process.env.NODE_ENV !== "production" && process.env.REPL_ID !== void 0 ? [(await import("@replit/vite-plugin-cartographer")).cartographer()] : [];
   return defineConfig({
     base: "/EncuentroApicola.github.io/",
-    // 👈 base importante para GitHub Pages
     plugins: [react(), runtimeErrorOverlay(), ...cartographerPlugin],
     resolve: {
       alias: {
